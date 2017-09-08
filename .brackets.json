@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "F:/xampp/htdocs/elprowinmvc.com/epsettings/siswa/public/js/tinymce/js/tinymce/plugins/anchor/plugin.min.js",
+        "F:/xampp/htdocs/elprowinmvc.com/epsettings/guru/public/js/ajaxmateri.js"
+    ]
+}
