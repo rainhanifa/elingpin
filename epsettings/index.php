@@ -16,17 +16,17 @@
                 $id = substr($data['id'],0,1);
                 
                 if($id == '1'){
-                   header("location:http://localhost:8080/elprowinmvc.com/epsettings/guru/index.php?p=beranda");
+                   header("location:http://localhost/elingpin/epsettings/guru/index.php?p=beranda");
                 } else if ($id == '2'){
-                   header("location:http://localhost:8080/elprowinmvc.com/epsettings/siswa/index.php?p=beranda");
+                   header("location:http://localhost/elingpin/epsettings/siswa/index.php?p=beranda");
                 } else {
-                    header("location:http://localhost:8080/elprowinmvc.com/");
+                    header("location:http://localhost/elingpin/");
                 }
             }
         } else {
-            header("location:http://localhost:8080/elprowinmvc.com/");
+            header("location:http://localhost/elingpin/");
         }
     } else {
-        header("location:http://localhost:8080/elprowinmvc.com/");
+        header("location:http://localhost/elingpin/");
     }
 ?>

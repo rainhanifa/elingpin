@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <base href="http://<?php echo $_SERVER['HTTP_HOST'];?>/elprowinmvc.com/epsettings/siswa/">
+        <base href="http://<?php echo $_SERVER['HTTP_HOST'];?>/elingpin/epsettings/siswa/">
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
@@ -28,7 +28,7 @@
         <link rel="stylesheet" type="text/css" href="public/css/siswa.css">
         
         <!-- Icons -->
-        <link rel="icon" href="public/images/logo.png">
+        <link rel="icon" href="public/images/logo1.png">
         
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -170,7 +170,7 @@
                     <?php
                 }
             } else {
-                header("location:http://localhost/elprowinmvc.com/frontpage.php?p=masuk");
+                header("location:http://localhost/elingpin/frontpage.php?p=masuk");
                 exit;
             }
 
@@ -179,15 +179,12 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <p class="copyright">&copy; Copyright 2014 by <img src="public/images/logo.png" width="36" height="43" alt="Logo SMKN 4 Malang"> SMKN 4 Malang</p> <span class="hidden-xs">|</span>
-                    <div class="partner">
-                        <p>Bekerja Sama dengan</p>
+                    <p class="copyright"> Copyright 2017 &copy; Fakultas Ilmu Keolahragaan
                         <a href="http://e-learning.um.ac.id/">
                             <img src="public/images/Logo-UM.png" width="1560" height="240" alt="Logo Universitas Negeri Malang" class="img-responsive">
                         </a>
-                    </div>
                     <br>
-                    <p class="text-center">Dibuat dan dikembangkan oleh Ibnu Shodiqin Suhaemy</p>
+                    <p class="text-center">Dibuat dan dikembangkan oleh <a href="http://illiyin.co">Illiyin Studio</a></p>
                 </div>
             </div>
         </footer>
@@ -219,7 +216,7 @@
                     echo '';
                 }
             } else {
-                header("location:http://localhost/elprowinmvc.com/frontpage.php?p=masuk");
+                header("location:http://localhost/elingpin/frontpage.php?p=masuk");
                 exit;
             }
         ?>
@@ -228,7 +225,7 @@
 </html>
 <?php
     } else {
-        header("location:http://localhost/elprowinmvc.com/frontpage.php?p=masuk");
+        header("location:http://localhost/elingpin/frontpage.php?p=masuk");
         exit;
     }
 ?>

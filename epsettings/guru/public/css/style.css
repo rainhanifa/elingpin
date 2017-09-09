@@ -24,6 +24,8 @@ body{
     height: 61px;
     cursor: pointer;
 }
+
+}
 .btn.btn-default:hover,
 .btn.btn-default:focus{
     border-right: none;
@@ -43,6 +45,32 @@ body{
     border-left: none;
     border-top: none;
     border-bottom: 3px solid #1d712f;
+    padding: 0;
+    font-weight: 400;
+}
+.btn.activity.action{
+    height: 41px;
+    font-size: 18px;
+    background: #EFDC05;
+    color: #fafafa;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 3px solid #e7a914;
+    padding: 0;
+    font-weight: 400;
+}
+.btn.lab.action{
+    height: 41px;
+    font-size: 18px;
+    background: #30A9DE;
+    color: #fafafa;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 3px solid #1070a4;
     padding: 0;
     font-weight: 400;
 }

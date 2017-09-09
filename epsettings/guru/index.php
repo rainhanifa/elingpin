@@ -256,7 +256,7 @@
                 $catat      = backgurucode::inslog($idguru, $kelas, $tanggal, $jam, $materi_log);
                                 
                 session_destroy();
-                header("location:http://localhost:8080/elprowinmvc.com/frontpage.php?p=masuk");
+                header("location:http://localhost/elingpin/frontpage.php?p=masuk");
             break;
             default:
                 backview::goto_page('home');

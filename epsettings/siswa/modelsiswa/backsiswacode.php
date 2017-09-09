@@ -3,7 +3,7 @@
         public static function koneksi(){
             $dbhost     = "localhost";
             $dbuser     = "root";
-            $dbpass     = "";
+            $dbpass     = "12345";
             $dbname     = "dbelprowin";
             $conn   = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
             if(mysqli_connect_errno()){

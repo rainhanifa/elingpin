@@ -4,7 +4,7 @@
         public static function connecttodb() {
             $dbHost = "localhost"; 
             $dbUser = "root";
-            $dbPass = "";
+            $dbPass = "12345";
             $dbName = "dbelprowin";
             $conn   = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
             if(mysqli_connect_errno()){

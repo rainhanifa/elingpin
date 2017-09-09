@@ -66,7 +66,7 @@
                 </div>
                 <h2>Berstandar Kurikulum 2013</h2>
                 <p>
-                    Materi ELINGPIN disusun berdasarkan silabus Kurikulum 2013 yang sedang dijalankan oleh SMKN 4 Malang, sehingga memiliki 
+                    Materi ELINGPIN disusun berdasarkan silabus kurikulum yang sedang dijalankan, sehingga memiliki 
                     batasan, tujuan dan format yang jelas dalam pembelajaran.
                 </p>
             </div>
@@ -83,7 +83,7 @@
         </div>
     </div>
 </section>
-<section class="konten-bawah">
+<!-- <section class="konten-bawah">
     <div class="container">
         <div class="row">
             <img src="public/images/Profil.png" width="198" height="202" alt="Foto Profil Pengembang ELINGPIN" class="profil img-responsive">
@@ -95,4 +95,4 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->

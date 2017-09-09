@@ -86,8 +86,8 @@
                                             $labid      = 'p=materi';
                                         }
                                     ?>
-                                    <a href="index.php?<?php echo $classid; ?>" class="btn btn-default action"><?php echo $classact; ?></a>
-                                    <a href="index.php?<?php echo $labid; ?>" class="btn btn-default action"><?php echo $labact; ?></a>
+                                    <a href="index.php?<?php echo $classid; ?>" class="btn activity action"><?php echo $classact; ?></a>
+                                    <a href="index.php?<?php echo $labid; ?>" class="btn lab action"><?php echo $labact; ?></a>
                                 </div>
                             </div>
                             <?php
