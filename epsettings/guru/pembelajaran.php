@@ -208,7 +208,7 @@
                     <?php
                 }
             } else {
-                header("location:http://localhost:8080/elingpin/frontpage.php?p=masuk");
+                header("location:http://localhost/elingpin/frontpage.php?p=masuk");
                 exit;
             }
 

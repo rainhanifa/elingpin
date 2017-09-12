@@ -104,14 +104,6 @@
                                                     <a href="index.php?p=home">Halaman Utama</a>
                                                     <span class="<?php echo $spanclasshome; ?>"></span>
                                                 </li>
-                                                <li class="<?php echo $classkomp; ?>">
-                                                    <a href="index.php?p=komp">Kompetensi</a>
-                                                    <span class="<?php echo $spanclasskomp; ?>"></span>
-                                                </li> 
-                                                <li class="<?php echo $classmateri; ?>">
-                                                    <a href="index.php?p=materi">Materi Ajar</a>
-                                                    <span class="<?php echo $spanclassmateri; ?>"></span>
-                                                </li>
                                                 <li class="<?php echo $classmasuk; ?>">
                                                     <a href="index.php?p=masuk">Masuk</a>
                                                     <span class="<?php echo $spanclassmasuk; ?>"></span>

@@ -3,15 +3,15 @@
     class javascript{
         public static function general(){
 ?>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/jquery-1.11.2.js"></script>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/bootstrap.js"></script>
 <?php
         }
         public static function formvalidate(){
 ?>
 <!-- Form Validator -->
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/form-validator/formValidation.js"></script>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/form-validator/bootstrap.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/form-validator/formValidation.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/form-validator/bootstrap.js"></script>
 <?php
         }
         public static function formprofil(){
@@ -194,14 +194,14 @@
                             message: 'Field Kategori tidak boleh kosong'
                         }
                     }
-                },
-                isimateri: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Field Isimateri tidak boleh kosong'
-                        }
-                    }
-                }
+                }//,
+                // isimateri: {
+                //     validators: {
+                //         notEmpty: {
+                //             message: 'Field Isimateri tidak boleh kosong'
+                //         }
+                //     }
+                //}
             }
         });
     });
@@ -280,7 +280,7 @@
         public static function tinymce(){
 ?>
 <!-- TinyMCE editor -->
-<script src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/cdn/tinymce/tinymce.min.js"></script>
+<script src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/cdn/tinymce/tinymce.min.js"></script>
 <script>
     tinymce.init({
         selector: "textarea", theme: "modern",
@@ -293,7 +293,7 @@
        toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
        image_advtab: true ,
        
-       external_filemanager_path:"http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/cdn/filemanager/",
+       external_filemanager_path:"http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/cdn/filemanager/",
        filemanager_title:"Responsive Filemanager" ,
        external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
     });
@@ -345,8 +345,8 @@
         }
         public static function jspdf(){
 ?>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/jspdf/dist/jspdf.min.js"></script>
-<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elprowinmvc.com/public/js/jspdf/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/jspdf/dist/jspdf.min.js"></script>
+<script type="text/javascript" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/elingpin/public/js/jspdf/jspdf.plugin.addimage.js"></script>
 <script type="text/javascript">
     var doc     = new jsPDF();
     var type    = document.getElementById("materitype").value;

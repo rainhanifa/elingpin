@@ -34,7 +34,7 @@
                     $guru_kelas = '';
                 }
             ?>
-            <h1 class="text-center">Data Progress Belajar Siswa Kelas <?php echo $guru_kelas;?></h1>
+            <h1 class="text-center">Data Progress Belajar <!-- Siswa Kelas <?php echo $guru_kelas;?> --></h1>
         </div>
         <div class="row form-cari">
             <form name="cari_siswa" id="cari_siswa" method="post" action="index.php?p=carisiswa" role="form" class="form-group">
@@ -63,8 +63,8 @@
 <section>
     <div class="container">
         <?php
-//            $url_siswa = "http://localhost:8080/elprowinmvc.com/epsettings/siswa/";
-            $url_siswa = "http://".$_SERVER["HTTP_HOST"]."/elprowinmvc.com/epsettings/siswa/";
+//            $url_siswa = "http://localhost:8080/elingpin/epsettings/siswa/";
+            $url_siswa = "http://".$_SERVER["HTTP_HOST"]."/elingpin/epsettings/siswa/";
             if($daftarsiswa<>''){
                 if(is_array($daftarsiswa)){
                     foreach($daftarsiswa as $data){

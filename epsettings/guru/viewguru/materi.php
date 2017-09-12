@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="row reg-heading">
-            <h1 class="text-center">Daftar Materi Pemrograman Web Dinamis</h1>
+            <h1 class="text-center">Daftar Materi</h1>
         </div>
         <div class="row form-cari materi">
             <form name="carimateri" id="carimateri" method="post" action="index.php?p=carimateri" role="form" class="form-group">

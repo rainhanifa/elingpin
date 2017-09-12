@@ -26,6 +26,7 @@
                         foreach($showhasil as $data){
                             $getmateri = $data['materi'];
                             $user   = $data['nama'];
+                            
                             $nilai  = backsiswacode::statusmateri($data['idhasil']);
                             $kclass = "";
                             if($nilai['nclass']>=75){
@@ -40,7 +41,6 @@
                             } else {
                                 $klab = "B";
                             }
-                            
                             if($kclass == 'L' and $klab == 'L'){
                                 $jumsub++;
                                 $category = "class";

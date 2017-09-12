@@ -39,7 +39,25 @@
                 <h3 class="text-center"><?php echo $data['themateri']; ?></h2>
                 <h3 class="text-center"><?php echo $data['submateri']; ?></h3>
                 <div class="form-reg">
-                    <?php echo $data['konten'] ?>
+                    <?php
+                        $konten = substr($data['konten'],0,4);
+                        $filename = "http://localhost/elingpin/materi".$data['konten'];
+                        if($konten == "/pdf"){       
+                            ?>
+                            <iframe src="http://localhost/elingpin/public/js/pdfjs/web/viewer.html?file=<?php echo $filename?>#zoom=page-auto"></iframe>
+                            <?php
+                        }
+                        else if($konten == "/vid"){
+                            //$filename =  realpath(dirname(__DIR__)."/../../materi".$data['konten']);
+                            ?>
+                             <video width="320" height="240" controls src="<?php echo $filename?>">
+                                Browser Anda tidak mendukung Video Player HTML5.
+                                </video> 
+                            <?php
+                        }
+                        else {
+                            echo $data['konten'];
+                        }?>
                 </div>
             </div>
             <?php
@@ -80,7 +98,14 @@
                 <?php
                     }
                 ?>
-                <button id="print" class="btn btn-default">Download Materi</button>
+                <?php if($konten == "/pdf" || $konten == "/vid" ) {
+                            echo'<a href="'.$filename.'" class="btn btn-default">Download Materi</a>';
+                        }
+                        else{
+                            echo '<button id="print" class="btn btn-default">Download Materi</button>';
+                        }
+                ?>
+                        
                 <input type="hidden" id="materitype" value="<?php echo $data['submateri'].'-'.$mc; ?>">
                 <a href="#" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-default">Komentar</a>
             </div>

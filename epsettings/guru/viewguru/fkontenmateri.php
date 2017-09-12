@@ -155,6 +155,16 @@
                     <label class="clues">Silahkan masukkan materi untuk modul anda</label>
                 </div>
             </div>
+            <div class="row item-reg">
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-12">
+                    <label for="filemateri" class="control-label">Upload Materi</label>
+                </div>
+                <div class="col-lg-11 col-md-10 col-sm-9 col-xs-12">
+                    <input type="file" name="filemateri" id="filemateri">
+                    <label class="clues">Materi dalam bentuk e-book (*.pdf) atau video (*.webm, *.ogg)</label>
+                </div>
+            </div>
+            
             <div class="col-lg-offset-1 col-md-offset-2">
                 <input type="submit" name="finish_reg" value="Selesai" class="btn btn-default">
             </div>

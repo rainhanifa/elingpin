@@ -131,6 +131,35 @@
                 $submateri  = $_POST['submateri'];
                 $kategori   = $_POST['kategori'];
                 $isi        = $_POST['isimateri'];
+
+
+                if($_FILES['filemateri']){
+                    $uploadOk = 1;
+
+                    $target_dir   = realpath(realpath(__DIR__)."/../../materi");
+                    $temp_file      =   $_FILES["filemateri"]["tmp_name"];
+                    $file_name      =   $_FILES["filemateri"]["name"];
+                    
+                    //get FileType
+                    $imageFileType = pathinfo($file_name,PATHINFO_EXTENSION);
+                    echo $imageFileType;
+                    if($imageFileType == "pdf") {
+                        $subfolder  = "/pdf/";
+                    }else if ($imageFileType == "webm" || $imageFileType == "ogg" || $imageFileType == "mp4"){
+                        $subfolder  = "/video/";
+                    }else{
+                        echo "gagal";exit;
+                    }
+                    
+                    $target_dir = realpath($target_dir.$subfolder);
+                    $target_file = $target_dir . "/" .basename($file_name);
+                    if(move_uploaded_file($temp_file, $target_file)){
+                        chmod($target_file, 0777);
+                    }
+
+                    $isi = $subfolder.basename($file_name);
+                }
+
                 $nama       = $_POST['uploader'];
                 $hasil      = backgurucode::addkm($materi, $submateri, $kategori, $isi, $nama);
                 if($hasil == 'true'){

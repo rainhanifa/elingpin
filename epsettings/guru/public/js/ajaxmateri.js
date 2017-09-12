@@ -1,4 +1,5 @@
 function pilih_kota(dom, kota) {
+    console.log("Loading submateri for "+kota);
     document.getElementById(dom).innerHTML="Loading ...";
     var xmlhttp=new GetXmlHttpObject();
     if (xmlhttp==null) {
@@ -8,7 +9,7 @@ function pilih_kota(dom, kota) {
     var date=new Date();
     var timestamp=date.getTime();
 	//alamat url script pemroses
-    var url="http://localhost:8080/elprowinmvc.com/epsettings/guru/viewguru/postmateri.php";
+    var url="http://localhost/elingpin/epsettings/guru/viewguru/postmateri.php";
 	//menyusun variabel yang akan dikirimkan dengan AJAX
     var param="submateri="+kota;
 	

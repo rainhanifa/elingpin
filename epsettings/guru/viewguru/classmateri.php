@@ -12,13 +12,35 @@
                 <h2 class="text-center" id="activity">Class Activity</h1>
                 <h3 class="text-center"><?php echo $title['materi']; ?></h3>
                 <h4 class="text-center" id="submateri"><?php echo $title['submateri']; ?></h4>
-                <div class="form-reg"><?php echo $data['konten']; ?></div>
+                <div class="form-reg">
+
+                    <?php
+                        $konten = substr($data['konten'],0,4);
+                        $filename = "http://localhost/elingpin/materi".$data['konten'];
+                        if($konten == "/pdf"){       
+                            ?>
+                            <iframe src="http://localhost/elingpin/public/js/pdfjs/web/viewer.html?file=<?php echo $filename?>#zoom=page-auto"></iframe>
+                            <?php
+                        }
+                        else if($konten == "/vid"){
+                            //$filename =  realpath(dirname(__DIR__)."/../../materi".$data['konten']);
+                            ?>
+                             <video width="320" height="240" controls src="<?php echo $filename?>">
+                                Browser Anda tidak mendukung Video Player HTML5.
+                                </video> 
+                            <?php
+                        }
+                        else {
+                            echo $data['konten'];
+                        }?>
+                    
+                </div>
             </div>
             <div class="form-reg modul-siswa">
                 <a href="index.php?p=fkm&i=<?php echo $data['idkonten']; ?>" class="btn btn-default action">Ubah Materi</a>
 <!--                <button id="print" class="btn btn-default">Download Materi</button>-->
 <!--                <a href="viewguru/pdfmateri.php" class="btn btn-default">Download Materi</a>-->
-                <a href="viewguru/downpdf.php?nm=<?php echo $_GET['i']; ?>" class="btn btn-default">Download Materi</a>
+                <a href="<?php echo($konten == "/pdf" || $konten == "/vid") ? $filename : 'viewguru/downpdf.php?nm='.$_GET['i']; ?>"  class="btn btn-default">Download Materi</a>
                 <input type="hidden" id="materitype" value="<?php echo $title['submateri'].'-class'; ?>">
             </div>
             <div role="tabpanel">
