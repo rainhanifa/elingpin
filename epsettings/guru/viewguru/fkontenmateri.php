@@ -20,6 +20,8 @@
                 <li>Isi form dibawah ini sesuai dengan data konten materi.</li>
                 <li>Field submateri akan tampil menyesuaikan dengan pilihan pada field materi.</li>
                 <li>Jika field submateri belum muncul data setelah memilih materi, harap menunggu sejenak.</li>
+                <li>Untuk konten dalam bentuk teks, masukkan pada field <b>Isi Materi</b>.</li>
+                <li>Untuk konten dalam bentuk e-book (*.pdf) atau video, masukkan pada field <b>Upload Materi</b>.</li>
             </ol>
         </div>
     </div>
@@ -145,14 +147,28 @@
                     <label for="isimateri" class="control-label">Isi Materi</label>
                 </div>
                 <div class="col-lg-11 col-md-10 col-sm-9 col-xs-12">
-                    <textarea name="isimateri" id="isimateri" rows="20">
-                        <?php
-                            if($_GET['i'] <> null){
-                                echo $arr_edmateri['konten']; 
-                            }
-                        ?>
-                    </textarea>
-                    <label class="clues">Silahkan masukkan materi untuk modul anda</label>
+                <?php
+                    if($_GET['i'] <> null){
+                        $key    = substr($arr_edmateri['konten'],0,4);
+                        if($key == '/pdf'){
+                            $filename = "http://localhost/elingpin/materi".$arr_edmateri['konten'];
+                            ?>
+                            <iframe src="http://localhost/elingpin/public/js/pdfjs/web/viewer.html?file=<?php echo $filename?>#zoom=page-auto"></iframe>
+                            <?php
+                        }
+                        else if($key == '/vid'){
+                            $filename = "http://localhost/elingpin/materi".$arr_edmateri['konten'];
+                            ?>
+                            <video width="320" height="240" controls src="<?php echo $filename?>">
+                                Browser Anda tidak mendukung Video Player HTML5.
+                                </video> 
+                            <?php
+                        }
+                        echo "<hr/>";
+                    }
+                ?>
+                    <textarea name="isimateri" id="isimateri" rows="20"><?php if($_GET['i'] <> null) { echo $arr_edmateri['konten']; } ?></textarea>
+                    <label class="clues">Silahkan masukkan materi untuk modul anda (teks, gambar)</label>
                 </div>
             </div>
             <div class="row item-reg">
